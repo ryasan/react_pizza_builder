@@ -1,13 +1,13 @@
 import React from 'react'
 
 import PizzaViewer from './components/pizza-viewer'
-import './app.css'
+import PizzaForm from './components/pizza-form'
 
 const App = () => {
     return (
-        <div className='app'>
+        <div className='h-screen w-screen flex flex-row'>
             <PizzaViewer />
-            {/* pizza form */}
+            <PizzaForm />
         </div>
     )
 }

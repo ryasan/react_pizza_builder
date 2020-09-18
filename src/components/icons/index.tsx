@@ -32,6 +32,9 @@ import BriefcaseIcon from './briefcase'
 import GithubIcon from './github'
 import LinkedInIcon from './linkedin'
 import CodepenIcon from './codepen'
+import MarkerIcon from './marker'
+import MapIcon from './map'
+import PhoneIcon from './phone'
 
 export type IconInterface = {
     name: string
@@ -86,12 +89,18 @@ const IconComponent: React.FC<IconInterface> = props => {
         case 'magnifier':
         case 'magnifier-texture':
             return <MagnifierIcon {...props} />
+        case 'map':
+            return <MapIcon {...props} />
+        case 'marker':
+            return <MarkerIcon {...props} />
         case 'money':
             return <MoneyIcon {...props} />
         case 'person':
             return <PersonIcon {...props} />
         case 'person-add':
             return <PersonAddIcon {...props} />
+        case 'phone':
+            return <PhoneIcon {...props} />
         case 'right-arrow':
             return <RightArrowIcon {...props} />
         case 'settings':

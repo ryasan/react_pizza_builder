@@ -618,6 +618,21 @@ video {
   }
 }
 
+.neu-flat-light {
+  background: #F7FAFC;
+  box-shadow: 5px 5px 10px #d2d5d6, -5px -5px 10px #ffffff;
+}
+
+.neu-pressed-light {
+  background: #F7FAFC;
+  box-shadow: inset 5px 5px 3px #d2d5d6, inset -5px -5px 3px #ffffff;
+}
+
+.neu-flat-dark {
+  background: #1A212C;
+  box-shadow: 5px 5px 10px #d2d5d6, -5px -5px 10px #8d8f90;
+}
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));

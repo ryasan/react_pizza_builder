@@ -37,20 +37,18 @@ $font-size-lg: 2.4rem;
 *::after {
     box-sizing: border-box;
     margin: 0;
+    // outline: 1px solid red !important;
     padding: 0;
-    text-rendering: optimizeLegibility;
 }
 
 html,
 body {
     box-sizing: border-box;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-size: 10px;
     margin: 0;
-    scroll-behavior: smooth;
 }
 
 body {
     background: $light;
-    font-size: 1.5rem;
+    overflow: hidden;
 }
