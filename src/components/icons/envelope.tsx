@@ -10,7 +10,7 @@ const EnvelopeIcon: React.FC = props => (
         x='0px'
         y='0px'
         viewBox='0 0 512 512'
-        style={{ enableBackground: 'new 0 0 512 512' }}
+        style={{ enableBackground: 'new 0 0 512 512' } as any}
         xmlSpace='preserve'>
         <g>
             <g>
