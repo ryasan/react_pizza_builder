@@ -1,0 +1,493 @@
+.pizza__inner {
+    width: 35rem;
+}
+
+.pizza__base-container {
+    height: 75%;
+    position: absolute;
+    right: 2.25rem;
+    top: 0;
+    width: 75%;
+}
+
+.pizza__base {
+    height: 100%;
+    width: 100%;
+}
+
+.pizza__topping {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 3rem;
+    position: absolute;
+    width: 3rem;
+
+    &--anchovy {
+        background-image: url('../assets/toppings/anchovy.svg');
+
+        &:nth-child(1) {
+            left: 5.5rem;
+            top: 5.5rem;
+        }
+
+        &:nth-child(2) {
+            left: 5.5rem;
+            top: 10.5rem;
+        }
+
+        &:nth-child(3) {
+            left: 11.5rem;
+            top: 4rem;
+        }
+
+        &:nth-child(4) {
+            left: 11.5rem;
+            top: 8rem;
+        }
+
+        &:nth-child(5) {
+            left: 11.5rem;
+            top: 12rem;
+        }
+
+        &:nth-child(6) {
+            left: 17rem;
+            top: 6rem;
+        }
+
+        &:nth-child(7) {
+            left: 17rem;
+            top: 11rem;
+        }
+    }
+
+    &--bacon {
+        background-image: url('../assets/toppings/bacon.svg');
+
+        &:nth-child(1) {
+            left: 7.5rem;
+            top: 3.5rem;
+        }
+
+        &:nth-child(2) {
+            left: 7.5rem;
+            top: 8.5rem;
+        }
+
+        &:nth-child(3) {
+            left: 13.5rem;
+            top: 2rem;
+        }
+
+        &:nth-child(4) {
+            left: 13.5rem;
+            top: 6rem;
+        }
+
+        &:nth-child(5) {
+            left: 13.5rem;
+            top: 10rem;
+        }
+
+        &:nth-child(6) {
+            left: 19rem;
+            top: 4rem;
+        }
+
+        &:nth-child(7) {
+            left: 19rem;
+            top: 9rem;
+        }
+    }
+
+    &--basil {
+        background-image: url('../assets/toppings/basil.svg');
+
+        &:nth-child(1) {
+            left: 3.5rem;
+            top: 4.5rem;
+        }
+
+        &:nth-child(2) {
+            left: 5.5rem;
+            top: 9.5rem;
+        }
+
+        &:nth-child(3) {
+            left: 9.5rem;
+            top: 2rem;
+        }
+
+        &:nth-child(4) {
+            left: 9.5rem;
+            top: 6rem;
+        }
+
+        &:nth-child(5) {
+            left: 9.5rem;
+            top: 10rem;
+        }
+
+        &:nth-child(6) {
+            left: 15rem;
+            top: 4rem;
+        }
+
+        &:nth-child(7) {
+            left: 15rem;
+            top: 9rem;
+        }
+    }
+
+    &--chili {
+        background-image: url('../assets/toppings/chili.svg');
+
+        &:nth-child(1) {
+            left: 6.5rem;
+            top: 4.5rem;
+        }
+
+        &:nth-child(2) {
+            left: 6.5rem;
+            top: 9.5rem;
+        }
+
+        &:nth-child(3) {
+            left: 11.5rem;
+            top: 3rem;
+        }
+
+        &:nth-child(4) {
+            left: 11.5rem;
+            top: 7rem;
+        }
+
+        &:nth-child(5) {
+            left: 11.5rem;
+            top: 11rem;
+        }
+
+        &:nth-child(6) {
+            left: 17rem;
+            top: 5rem;
+        }
+
+        &:nth-child(7) {
+            left: 17rem;
+            top: 10rem;
+        }
+    }
+
+    &--mozzarella {
+        background-image: url('../assets/toppings/mozzarella.svg');
+
+        &:nth-child(1) {
+            left: 3.5rem;
+            top: 4.5rem;
+        }
+
+        &:nth-child(2) {
+            left: 3.5rem;
+            top: 8.5rem;
+        }
+
+        &:nth-child(3) {
+            left: 9.5rem;
+            top: 2rem;
+        }
+
+        &:nth-child(4) {
+            left: 9.5rem;
+            top: 6rem;
+        }
+
+        &:nth-child(5) {
+            left: 9.5rem;
+            top: 10rem;
+        }
+
+        &:nth-child(6) {
+            left: 15rem;
+            top: 3rem;
+        }
+
+        &:nth-child(7) {
+            left: 15rem;
+            top: 8rem;
+        }
+    }
+
+    &--mushroom {
+        background-image: url('../assets/toppings/mushroom.svg');
+
+        &:nth-child(1) {
+            left: 7.5rem;
+            top: 4.5rem;
+        }
+
+        &:nth-child(2) {
+            left: 6.5rem;
+            top: 10.5rem;
+        }
+
+        &:nth-child(3) {
+            left: 11.5rem;
+            top: 3rem;
+        }
+
+        &:nth-child(4) {
+            left: 11.5rem;
+            top: 7rem;
+        }
+
+        &:nth-child(5) {
+            left: 11.5rem;
+            top: 11rem;
+        }
+
+        &:nth-child(6) {
+            left: 17rem;
+            top: 3rem;
+        }
+
+        &:nth-child(7) {
+            left: 17rem;
+            top: 7rem;
+        }
+    }
+
+    &--olive {
+        background-image: url('../assets/toppings/olive.svg');
+
+        &:nth-child(1) {
+            left: 5.5rem;
+            top: 6rem;
+        }
+
+        &:nth-child(2) {
+            left: 7.5rem;
+            top: 10rem;
+        }
+
+        &:nth-child(3) {
+            left: 9.5rem;
+            top: 4rem;
+        }
+
+        &:nth-child(4) {
+            left: 11.5rem;
+            top: 8rem;
+        }
+
+        &:nth-child(5) {
+            left: 13.5rem;
+            top: 11rem;
+        }
+
+        &:nth-child(6) {
+            left: 19rem;
+            top: 6rem;
+        }
+
+        &:nth-child(7) {
+            left: 15rem;
+            top: 6rem;
+        }
+    }
+
+    &--onion {
+        background-image: url('../assets/toppings/onion.svg');
+
+        &:nth-child(1) {
+            left: 2.5rem;
+            top: 7rem;
+        }
+
+        &:nth-child(2) {
+            left: 7.5rem;
+            top: 8.5rem;
+        }
+
+        &:nth-child(3) {
+            left: 8.5rem;
+            top: 2rem;
+        }
+
+        &:nth-child(4) {
+            left: 13.5rem;
+            top: 4rem;
+        }
+
+        &:nth-child(5) {
+            left: 11.5rem;
+            top: 10rem;
+        }
+
+        &:nth-child(6) {
+            left: 20rem;
+            top: 6rem;
+        }
+
+        &:nth-child(7) {
+            left: 17rem;
+            top: 9rem;
+        }
+    }
+
+    &--pepper {
+        background-image: url('../assets/toppings/pepper.svg');
+
+        &:nth-child(1) {
+            left: 5.5rem;
+            top: 2.5rem;
+        }
+
+        &:nth-child(2) {
+            left: 5.5rem;
+            top: 7.5rem;
+        }
+
+        &:nth-child(3) {
+            left: 13.5rem;
+            top: 2rem;
+        }
+
+        &:nth-child(4) {
+            left: 11.5rem;
+            top: 5rem;
+        }
+
+        &:nth-child(5) {
+            left: 9.5rem;
+            top: 8rem;
+        }
+
+        &:nth-child(6) {
+            left: 20rem;
+            top: 5rem;
+        }
+
+        &:nth-child(7) {
+            left: 18rem;
+            top: 9rem;
+        }
+    }
+
+    &--pepperoni {
+        background-image: url('../assets/toppings/pepperoni.svg');
+
+        &:nth-child(1) {
+            left: 5.5rem;
+            top: 3.5rem;
+        }
+
+        &:nth-child(2) {
+            left: 5.5rem;
+            top: 8.5rem;
+        }
+
+        &:nth-child(3) {
+            left: 11.5rem;
+            top: 2rem;
+        }
+
+        &:nth-child(4) {
+            left: 11.5rem;
+            top: 6rem;
+        }
+
+        &:nth-child(5) {
+            left: 11.5rem;
+            top: 10rem;
+        }
+
+        &:nth-child(6) {
+            left: 17rem;
+            top: 4rem;
+        }
+
+        &:nth-child(7) {
+            left: 17rem;
+            top: 9rem;
+        }
+    }
+
+    &--sweetcorn {
+        background-image: url('../assets/toppings/sweetcorn.svg');
+
+        &:nth-child(1) {
+            left: 6.5rem;
+            top: 6rem;
+        }
+
+        &:nth-child(2) {
+            left: 5.5rem;
+            top: 8.5rem;
+        }
+
+        &:nth-child(3) {
+            left: 12.5rem;
+            top: 2rem;
+        }
+
+        &:nth-child(4) {
+            left: 13.5rem;
+            top: 6rem;
+        }
+
+        &:nth-child(5) {
+            left: 11.5rem;
+            top: 10rem;
+        }
+
+        &:nth-child(6) {
+            left: 17rem;
+            top: 4rem;
+        }
+
+        &:nth-child(7) {
+            left: 17rem;
+            top: 9rem;
+        }
+    }
+
+    &--tomato {
+        background-image: url('../assets/toppings/tomato.svg');
+
+        &:nth-child(1) {
+            left: 3.5rem;
+            top: 5.5rem;
+        }
+
+        &:nth-child(2) {
+            left: 3.5rem;
+            top: 9.5rem;
+        }
+
+        &:nth-child(3) {
+            left: 9.5rem;
+            top: 3rem;
+        }
+
+        &:nth-child(4) {
+            left: 9.5rem;
+            top: 8rem;
+        }
+
+        &:nth-child(5) {
+            left: 13.5rem;
+            top: 11.5rem;
+        }
+
+        &:nth-child(6) {
+            left: 19rem;
+            top: 5rem;
+        }
+
+        &:nth-child(7) {
+            left: 20rem;
+            top: 9rem;
+        }
+    }
+}

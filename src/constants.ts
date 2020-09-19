@@ -51,3 +51,18 @@ interface SizePrice {
 }
 
 export const sizePrices = { small: 999, medium: 1299, large: 1699 } as SizePrice
+
+export {
+    Anchovy,
+    Bacon,
+    Basil,
+    Chili,
+    Mozzarella,
+    Mushroom,
+    Olive,
+    Onion,
+    Pepper,
+    Pepperoni,
+    Sweetcorn,
+    Tomato
+}

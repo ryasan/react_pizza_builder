@@ -33,6 +33,22 @@ body {
     overflow: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #f7fafc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $red;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
 .divider {
     &::before {
         background: $red;

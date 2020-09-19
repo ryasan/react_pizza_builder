@@ -14,8 +14,8 @@ const PlaceOrderComponent: React.FC = () => {
     const { order } = useContext(Context)
 
     return (
-        <div className='order w-full py-5 px-10 flex flex-col'>
-            <div className='order__summary'>
+        <div className='order w-full flex-1 py-5 px-10 flex flex-col'>
+            <div className='order__summary h-full overflow-y-scroll'>
                 <ul className='item-list'>
                     <li className='flex justify-between'>
                         <span>{capitalize(order.size)}</span>
@@ -34,6 +34,9 @@ const PlaceOrderComponent: React.FC = () => {
                 </div>
             </div>
             <button
+                onClick={() =>
+                    alert('Your order is being processed. Thank you!')
+                }
                 className={classList({
                     'active:neu-pressed-red': true,
                     'bg-red-500': true,

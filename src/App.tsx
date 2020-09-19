@@ -1,4 +1,4 @@
-import React, { SetStateAction, useState, Dispatch } from 'react'
+import React, { useState } from 'react'
 
 import PizzaViewer from './components/pizza-viewer'
 import PizzaForm from './components/pizza-form'
