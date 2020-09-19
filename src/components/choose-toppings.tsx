@@ -48,14 +48,6 @@ const toppings: ToppingData[] = [
     { name: 'tomato', icon: Tomato }
 ]
 
-/*
-'topping-icon': true,
-'w-10 h-10': true,
-'inline-block': true,
-'rounded-l-lg': true,
-'bg-gray-700': true,
-*/
-
 const ChooseToppingsComponent: React.FC = props => {
     const [selected, setSelected] = useState<Topping[]>([])
 
@@ -66,10 +58,6 @@ const ChooseToppingsComponent: React.FC = props => {
                 : [...prev, topping]
         )
     }
-
-    useEffect(() => {
-        console.log(selected)
-    }, [selected])
 
     return (
         <div className='topping-list grid grid-cols-4 gap-4 py-5 px-10'>
@@ -98,7 +86,11 @@ const ChooseToppingsComponent: React.FC = props => {
                             'topping-icon': true,
                             'w-10 h-10': true
                         })}>
-                        <img className='h-6 w-6 m-2' src={t.icon} alt={t.name} />
+                        <img
+                            className='h-6 w-6 m-2'
+                            src={t.icon}
+                            alt={t.name}
+                        />
                     </span>
                     <span className='h-full inline-block leading-10 ml-3'>
                         {capitalize(t.name)}
