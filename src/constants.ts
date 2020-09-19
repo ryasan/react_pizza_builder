@@ -47,10 +47,17 @@ export const toppings: ToppingData[] = [
 ]
 
 interface SizePrice {
-    [size: string]: number
+    [size: string]: {
+        price: number
+        inches: number
+    }
 }
 
-export const sizePrices = { small: 999, medium: 1299, large: 1699 } as SizePrice
+export const sizePrices = {
+    small: { price: 999, inches: 8 },
+    medium: { price: 1299, inches: 12 },
+    large: { price: 1699, inches: 16 }
+} as SizePrice
 
 export {
     Anchovy,

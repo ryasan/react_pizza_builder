@@ -9,7 +9,10 @@ const PizzaViewerComponent: React.FC = () => {
     const { order } = useContext(Context)
 
     return (
-        <div className='pizza w-2/5 h-screen relative flex items-center justify-center neu-flat-dark bg-red-500'>
+        <div className='pizza h-screen relative flex items-center justify-center'>
+            <h1 className='pizza__title absolute text-white top-0 left-0 text-6xl text-center w-full mt-5'>
+                Mr. Pizza
+            </h1>
             <div className='pizza__inner absolute'>
                 <div className='pizza__base-container'>
                     {/* prettier-ignore */}

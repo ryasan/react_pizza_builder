@@ -51,7 +51,7 @@ const ChooseToppingsComponent: React.FC = () => {
                                 alt={t.name}
                             />
                         </span>
-                        <span className='h-full inline-block leading-10 ml-3'>
+                        <span className='h-full inline-block overflow-hidden whitespace-no-wrap leading-10 ml-3'>
                             {capitalize(t.name)}
                         </span>
                     </div>

@@ -1,3 +1,21 @@
+.pizza {
+    --stripe: #f56565;
+    --bg: #f57777;
+
+    background:
+        linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+        linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+        linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-color: var(--stripe);
+    background-size: 100px 100px;
+    width: 38rem;
+}
+
+.pizza__title {
+    font-family: 'Vast Shadow', cursive;
+}
+
 .pizza__inner {
     width: 35rem;
 }

@@ -20,7 +20,7 @@ export const Context = React.createContext<ContextProps>({
 })
 
 const App = () => {
-    const [order, setOrder] = useState({ toppings: [], size: 'small' })
+    const [order, setOrder] = useState({ toppings: [], size: 'medium' })
 
     return (
         <Context.Provider

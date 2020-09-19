@@ -7,7 +7,7 @@ import { classList, formatPrice, capitalize } from '../utils'
 import { sizePrices } from '../constants'
 
 const calcTotal = (order: Order): number => {
-    return sumBy(order.toppings, 'price') + sizePrices[order.size]
+    return sumBy(order.toppings, 'price') + sizePrices[order.size].price
 }
 
 const PlaceOrderComponent: React.FC = () => {
@@ -15,11 +15,11 @@ const PlaceOrderComponent: React.FC = () => {
 
     return (
         <div className='order w-full flex-1 py-5 px-10 flex flex-col'>
-            <div className='order__summary h-full overflow-y-scroll'>
+            <div className='order__summary h-full'>
                 <ul className='item-list'>
                     <li className='flex justify-between'>
-                        <span>{capitalize(order.size)}</span>
-                        <span>{formatPrice(sizePrices[order.size])}</span>
+                        <span>{capitalize(order.size)} Size</span>
+                        <span>{formatPrice(sizePrices[order.size].price)}</span>
                     </li>
                     {order.toppings.map(t => (
                         <li key={t.name} className='flex justify-between'>

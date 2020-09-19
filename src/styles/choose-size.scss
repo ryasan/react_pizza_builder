@@ -1,0 +1,31 @@
+@import './globals';
+
+.size__dish {
+    align-items: center;
+    background: lighten($dark-gray, 25%);
+    border: 0.2rem solid $dark-gray;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s;
+
+    &--small {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    &--medium {
+        height: 4rem;
+        width: 4em;
+    }
+
+    &--large {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    &:not(:first-child) {
+        margin-left: 3rem;
+    }
+}

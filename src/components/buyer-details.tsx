@@ -53,29 +53,27 @@ const fields = [
     }
 ]
 
-const BuyerDetailsComponent: React.FC = props => {
-    return (
-        <div className='input-details grid grid-cols-3 gap-4 py-5 px-10 w-full'>
-            {fields.map((f, i) => (
-                <div className={fieldClasses} key={i}>
-                    <label className='flex justify-between'>
-                        {f.label}
-                        <span className='icon-wrap h-6 inline-block w-6'>
-                            <Icon
-                                className='h-full w-full text-red-500'
-                                name={f.icon}
-                            />
-                        </span>
-                    </label>
-                    <input
-                        className={inputClasses}
-                        type='text'
-                        placeholder={f.placeholder}
-                    />
-                </div>
-            ))}
-        </div>
-    )
-}
+const BuyerDetailsComponent: React.FC = props => (
+    <div className='input-details grid grid-cols-3 gap-4 py-5 px-10 w-full'>
+        {fields.map((f, i) => (
+            <div className={fieldClasses} key={i}>
+                <label className='flex justify-between'>
+                    {f.label}
+                    <span className='icon-wrap h-6 inline-block w-6'>
+                        <Icon
+                            className='h-full w-full text-red-500'
+                            name={f.icon}
+                        />
+                    </span>
+                </label>
+                <input
+                    className={inputClasses}
+                    type='text'
+                    placeholder={f.placeholder}
+                />
+            </div>
+        ))}
+    </div>
+)
 
 export default BuyerDetailsComponent

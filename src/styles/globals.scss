@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Faster+One&family=Rye&family=Vast+Shadow&display=swap');
+
 $red: #f56565;
 $dark-gray: #4a5667;
 
@@ -7,10 +9,8 @@ $dark-gray: #4a5667;
     box-sizing: border-box;
     margin: 0;
     // outline: 1px solid red !important;
-    overflow: hidden;
     padding: 0;
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 input:focus {
@@ -30,7 +30,6 @@ body {
 
 body {
     color: $dark-gray;
-    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -70,6 +69,7 @@ body {
 }
 
 .order__btn {
+    font-family: 'Vast Shadow', cursive;
     outline-color: $red;
 
     &:active {
