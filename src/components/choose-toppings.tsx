@@ -1,41 +1,45 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import { find } from 'lodash'
 
-import { toppings, Topping } from '../constants'
+import { Context, Order } from '../app'
+import { toppings, ToppingData } from '../constants'
 import { capitalize, classList } from '../utils'
 
 const ChooseToppingsComponent: React.FC = () => {
-    const [selected, setSelected] = useState<Topping[]>([])
+    const { setOrder, order } = useContext(Context)
 
-    const toggleSelect = (topping: Topping) => () => {
-        setSelected(prev =>
-            prev.includes(topping)
-                ? prev.filter(t => t !== topping)
-                : [...prev, topping]
-        )
+    const toggleSelect = (topping: ToppingData) => () => {
+        setOrder((prev: Order) => {
+            const exists = find(prev.toppings, { name: topping.name })
+            const toppings = exists
+                ? prev.toppings.filter(t => t.name !== topping.name)
+                : [...prev.toppings, topping]
+
+            return { ...prev, toppings }
+        })
     }
 
     return (
         <div className='w-full'>
-            <p className=''>Toppings</p>
+            <p className='px-10'>Toppings</p>
             <div className='topping-list w-full grid grid-cols-4 gap-4 py-5 px-10'>
                 {toppings.map(t => (
                     <div
                         key={t.name}
-                        onClick={toggleSelect(t.name)}
+                        onClick={toggleSelect(t)}
                         className={classList({
                             'cursor-pointer': true,
                             'h-10': true,
                             'leading-10': true,
-
-                            'neu-flat-light': !selected.includes(t.name),
-                            'neu-pressed-light': selected.includes(t.name),
+                            'neu-flat-light': !find(order.toppings, { name: t.name }), // prettier-ignore
+                            'neu-pressed-light': find(order.toppings, { name: t.name }), // prettier-ignore
                             'rounded-lg': true,
                             'topping-item': true
                         })}>
                         <span
                             className={classList({
-                                'bg-gray-600': !selected.includes(t.name),
-                                'bg-red-500': selected.includes(t.name),
+                                'bg-gray-600': !find(order.toppings, { name: t.name }), // prettier-ignore
+                                'bg-red-500': find(order.toppings, { name: t.name }), // prettier-ignore
                                 'inline-block': true,
                                 'justify-center': true,
                                 'rounded-l-lg': true,

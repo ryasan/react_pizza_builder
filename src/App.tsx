@@ -2,22 +2,31 @@ import React, { SetStateAction, useState, Dispatch } from 'react'
 
 import PizzaViewer from './components/pizza-viewer'
 import PizzaForm from './components/pizza-form'
+import { ToppingData } from './constants'
 
-interface ContextProps {
-    total: number
-    setTotal: Dispatch<SetStateAction<number>>
+export type Order = {
+    toppings: ToppingData[]
+    size: string
 }
 
-export const Context = React.createContext<ContextProps | null>(null)
+export interface ContextProps {
+    order: Order
+    setOrder: (order: any) => void
+}
+
+export const Context = React.createContext<ContextProps>({
+    order: { toppings: [], size: '' },
+    setOrder: () => ({ toppings: [], size: '' })
+})
 
 const App = () => {
-    const [total, setTotal] = useState(0)
+    const [order, setOrder] = useState({ toppings: [], size: 'small' })
 
     return (
         <Context.Provider
             value={{
-                total,
-                setTotal
+                order,
+                setOrder
             }}>
             <div className='h-screen w-screen flex flex-row'>
                 <PizzaViewer />

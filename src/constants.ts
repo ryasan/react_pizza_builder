@@ -25,7 +25,7 @@ export type Topping =
     | 'sweetcorn'
     | 'tomato'
 
-interface ToppingData {
+export interface ToppingData {
     name: Topping
     icon: string
     price: number
@@ -47,14 +47,7 @@ export const toppings: ToppingData[] = [
 ]
 
 interface SizePrice {
-    [size: string]: {
-        base: number
-        toppings: number
-    }
+    [size: string]: number
 }
 
-export const sizePrices = <SizePrice>{
-    small: { base: 999, toppings: 69 },
-    medium: { base: 1299, toppings: 99 },
-    large: { base: 1699, toppings: 129 }
-}
+export const sizePrices = { small: 999, medium: 1299, large: 1699 } as SizePrice
