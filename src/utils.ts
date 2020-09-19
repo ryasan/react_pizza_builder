@@ -1,3 +1,7 @@
+export const capitalize = (str: string) => {
+    return str[0].toUpperCase() + str.slice(1)
+}
+
 export const classList = (classes: object) => {
     return Object.entries(classes)
         .filter(entry => entry[1])

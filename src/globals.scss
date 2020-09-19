@@ -1,36 +1,5 @@
-$deep-purple: #311b92;
-$black: #202025;
-$blacker: #131313;
-$blue: #216ba5;
-$blue-gray: #263238;
-$brown: #3e2723;
-$cyan: #00bcd4;
-$deep-teal: #00695c;
-$gray: #616161;
-$green: #388e3c;
-$indigo: #1a237e;
-$light: #e1e1e1;
-$light-blue: #03a9f4;
-$light-green: #8bc34a;
-$orange: #ff6d00;
-$pink: #e91e63;
-$purple: #9c27b0;
-$red: #da2c43;
-$teal: #00bfa5;
-$yellow: #fdd835;
-
-$max-width: 120rem;
-
-$box-shadow-top: 0 -0.4rem 1rem rgba(20, 20, 20, 0.7); // prettier-ignore
-$box-shadow-xc: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.12), 0 0.1rem 0.2rem rgba(0, 0, 0, 0.24); // prettier-ignore
-$box-shadow-s: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.16), 0 0.3rem 0.6rem rgba(0, 0, 0, 0.23); // prettier-ignore
-$box-shadow-m: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 0.6rem 0.6rem rgba(0, 0, 0, 0.23); // prettier-ignore
-$box-shadow-lg: 0 1.4rem 2.8rem rgba(0, 0, 0, 0.25), 0 1rem 1rem rgba(0, 0, 0, 0.22); // prettier-ignore
-$box-shadow-xlg: 0 1.9rem 3.8rem rgba(0, 0, 0, 0.3), 0 1.5rem 1.2rem rgba(0, 0, 0, 0.22); // prettier-ignore
-
-$font-size-s: 1.2rem;
-$font-size-m: 1.8rem;
-$font-size-lg: 2.4rem;
+$red: #f56565;
+$dark-gray: #4a5667;
 
 *,
 *::before,
@@ -38,7 +7,10 @@ $font-size-lg: 2.4rem;
     box-sizing: border-box;
     margin: 0;
     // outline: 1px solid red !important;
+    overflow: hidden;
     padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 html,
@@ -49,6 +21,26 @@ body {
 }
 
 body {
-    background: $light;
+    color: $dark-gray;
     overflow: hidden;
+}
+
+.divider {
+    &::before {
+        background: $red;
+        content: '';
+        flex: 1;
+        height: 0.1rem;
+        margin: 0 2rem;
+        width: 100%;
+    }
+
+    &::after {
+        background: $red;
+        content: '';
+        flex: 1;
+        height: 0.1rem;
+        margin: 0 2rem;
+        width: 100%;
+    }
 }
