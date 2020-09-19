@@ -701,7 +701,7 @@ module.exports = {
         appearance: ['responsive'],
         backgroundAttachment: ['responsive'],
         backgroundClip: ['responsive'],
-        backgroundColor: ['responsive', 'hover', 'focus'],
+        backgroundColor: ['responsive', 'hover', 'focus', 'active'],
         backgroundImage: ['responsive'],
         gradientColorStops: ['responsive', 'hover', 'focus'],
         backgroundOpacity: ['responsive', 'hover', 'focus'],
@@ -709,12 +709,12 @@ module.exports = {
         backgroundRepeat: ['responsive'],
         backgroundSize: ['responsive'],
         borderCollapse: ['responsive'],
-        borderColor: ['responsive', 'hover', 'focus'],
-        borderOpacity: ['responsive', 'hover', 'focus'],
-        borderRadius: ['responsive'],
-        borderStyle: ['responsive'],
-        borderWidth: ['responsive'],
-        boxShadow: ['responsive', 'hover', 'focus'],
+        borderColor: ['responsive', 'hover', 'focus', 'active'],
+        borderOpacity: ['responsive', 'hover', 'focus', 'active'],
+        borderRadius: ['responsive', 'active'],
+        borderStyle: ['responsive', 'active'],
+        borderWidth: ['responsive', 'active'],
+        boxShadow: ['responsive', 'hover', 'focus', 'active'],
         boxSizing: ['responsive'],
         container: ['responsive'],
         cursor: ['responsive'],
@@ -738,7 +738,7 @@ module.exports = {
         fontStyle: ['responsive'],
         fontWeight: ['responsive', 'hover', 'focus'],
         height: ['responsive'],
-        inset: ['responsive'],
+        inset: ['responsive', 'active'],
         justifyContent: ['responsive'],
         justifyItems: ['responsive'],
         justifySelf: ['responsive'],
@@ -820,6 +820,14 @@ module.exports = {
                 '.neu-flat-dark': {
                     background: '#1A212C',
                     'box-shadow': '5px 5px 10px #d2d5d6, -5px -5px 10px #8d8f90'
+                },
+                '.neu-flat-red': {
+                    background: '#F56565',
+                    'box-shadow': '5px 5px 10px #8d8f90'
+                },
+                '.neu-pressed-red': {
+                    background: '#F56565',
+                    'box-shadow': 'inset 5px 5px 10px #d05656, inset -5px -5px 10px #ff7474' // prettier-ignore
                 }
             }
             addComponents(AppLogo)

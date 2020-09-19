@@ -1,7 +1,9 @@
 import React from 'react'
-import Icon from './icons'
 
-const fieldClasses = [
+import Icon from './icons'
+import { join } from '../utils'
+
+const fieldClasses = join([
     'border-gray-200',
     'border',
     'field',
@@ -14,7 +16,7 @@ const fieldClasses = [
     'rounded-lg',
     'text-gray-700',
     'w-full'
-].join(' ')
+])
 
 const inputClasses = ['neu-pressed-light', 'p-3', 'rounded-lg', 'w-full'].join(' ') // prettier-ignore
 
@@ -59,7 +61,10 @@ const BuyerDetailsComponent: React.FC = props => {
                     <label className='flex justify-between'>
                         {f.label}
                         <span className='icon-wrap h-6 inline-block w-6'>
-                            <Icon className='h-full w-full text-red-500' name={f.icon} />
+                            <Icon
+                                className='h-full w-full text-red-500'
+                                name={f.icon}
+                            />
                         </span>
                     </label>
                     <input

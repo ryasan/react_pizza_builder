@@ -13,6 +13,14 @@ $dark-gray: #4a5667;
     white-space: nowrap;
 }
 
+input:focus {
+    box-shadow:
+        0 0 0 2pt $red,
+        inset 5px 5px 3px #d2d5d6,
+        inset -5px -5px 3px white !important;
+    outline: 0;
+}
+
 html,
 body {
     box-sizing: border-box;
@@ -42,5 +50,17 @@ body {
         height: 0.1rem;
         margin: 0 2rem;
         width: 100%;
+    }
+}
+
+.place-order-btn {
+    outline-color: $red;
+
+    &:active {
+        box-shadow: inset 5px 5px 10px #d05656, inset -5px -5px 10px #ff7474;
+    }
+
+    &:focus {
+        outline-color: $red;
     }
 }
