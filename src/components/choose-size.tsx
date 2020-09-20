@@ -27,7 +27,7 @@ const ChooseSizeComponent: React.FC = () => {
                             'border-red-600': order.size === size,
                             'text-white': order.size === size,
                             'hover:bg-red-500': order.size === size,
-                            'hover:bg-gray-300': true
+                            'hover:bg-gray-200': true
                         })}>
                         {details.inches}"
                     </div>

@@ -28,7 +28,7 @@ const PlaceOrderComponent: React.FC = () => {
                         </li>
                     ))}
                 </ul>
-                <div className='flex justify-between'>
+                <div className='flex justify-between mt-5 font-bold'>
                     <span>Total:</span>
                     <span>{formatPrice(calcTotal(order))}</span>
                 </div>
@@ -40,8 +40,7 @@ const PlaceOrderComponent: React.FC = () => {
                 className={classList({
                     'active:neu-pressed-red': true,
                     'bg-red-500': true,
-                    'h-24': true,
-                    'my-5': true,
+                    'h-16': true,
                     'neu-flat-red': true,
                     order__btn: true,
                     'rounded-md': true,

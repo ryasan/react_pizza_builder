@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import PizzaViewer from './components/pizza-viewer'
 import PizzaForm from './components/pizza-form'
-import { ToppingData } from './constants'
+import { Pepperoni, ToppingData, Topping } from './constants'
 
 export type Order = {
     toppings: ToppingData[]
@@ -20,7 +20,12 @@ export const Context = React.createContext<ContextProps>({
 })
 
 const App = () => {
-    const [order, setOrder] = useState({ toppings: [], size: 'medium' })
+    const [order, setOrder] = useState({
+        toppings: [
+            { name: 'pepperoni' as Topping, price: 150, icon: Pepperoni }
+        ],
+        size: 'medium'
+    })
 
     return (
         <Context.Provider
