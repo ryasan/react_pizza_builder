@@ -13,9 +13,9 @@ const ChooseSizeComponent: React.FC = () => {
     }
 
     return (
-        <div className='w-full'>
-            <p className='px-10'>Size</p>
-            <div className='size w-full flex justify-center items-center px-10'>
+        <div className='w-full px-10'>
+            <p>Size</p>
+            <div className='size w-full max-w-3xl m-auto flex justify-evenly items-center px-10 overflow-hidden'>
                 {Object.entries(sizePrices).map(([size, details], i) => (
                     <div
                         key={i}
@@ -27,7 +27,8 @@ const ChooseSizeComponent: React.FC = () => {
                             'border-red-600': order.size === size,
                             'text-white': order.size === size,
                             'hover:bg-red-500': order.size === size,
-                            'hover:bg-gray-200': true
+                            'hover:bg-gray-200': true,
+                            'bg-cover': true
                         })}>
                         {details.inches}"
                     </div>

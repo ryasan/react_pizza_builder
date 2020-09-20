@@ -29,12 +29,13 @@ const ChooseToppingsComponent: React.FC = () => {
                         onClick={toggleSelect(t)}
                         className={classList({
                             'cursor-pointer': true,
+                            flex: true,
                             'h-10': true,
                             'leading-10': true,
                             'neu-flat-light': !find(order.toppings, { name: t.name }), // prettier-ignore
                             'neu-pressed-light': find(order.toppings, { name: t.name }), // prettier-ignore
                             'rounded-lg': true,
-                            'topping-item': true
+                            'topping-item': true,
                         })}>
                         <span
                             className={classList({

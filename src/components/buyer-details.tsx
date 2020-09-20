@@ -29,7 +29,7 @@ interface Field {
     name: NameType
     icon: string
     placeholder: string
-    modifier?: (args: any) => void
+    modifier?: (args: any) => string | number
 }
 
 const fields: Field[] = [
@@ -37,7 +37,7 @@ const fields: Field[] = [
         label: 'Name',
         name: 'name',
         icon: 'person',
-        placeholder: 'Froddo Baggins'
+        placeholder: 'Frodo Baggins'
     },
     {
         label: 'Email',
@@ -61,7 +61,8 @@ const fields: Field[] = [
         label: 'State',
         name: 'state',
         icon: 'map',
-        placeholder: 'CA'
+        placeholder: 'CA',
+        modifier: (text: string) => text.toUpperCase()
     },
     {
         label: 'Phone',
@@ -173,7 +174,9 @@ const BuyerDetailsComponent: React.FC = () => {
                             {state.errors[f.name]}
                         </span>
                     )}
-                    <label className='flex justify-between' htmlFor={f.name}>
+                    <label
+                        className='flex justify-between items-center'
+                        htmlFor={f.name}>
                         {f.label}
                         <span className='icon-wrap h-6 inline-block w-6'>
                             <Icon
