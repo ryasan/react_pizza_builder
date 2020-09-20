@@ -40,7 +40,7 @@ const PlaceOrderComponent: React.FC = () => {
                 className={classList({
                     'active:neu-pressed-red': true,
                     'bg-red-500': true,
-                    'h-12': true,
+                    'h-24': true,
                     'my-5': true,
                     'neu-flat-red': true,
                     order__btn: true,
