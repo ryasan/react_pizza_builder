@@ -1,7 +1,8 @@
-import React, { ChangeEvent, useState } from 'react'
+import React, { ChangeEvent, useContext, useState, useEffect } from 'react'
 
 import Icon from './icons'
 import { join } from '../utils'
+import { Context } from '../app'
 
 const fieldClasses = join([
     'border-gray-200',
@@ -74,12 +75,12 @@ const fields: Field[] = [
 ]
 
 interface Errors {
-    name: string | null
-    email: string | null
-    confirm: string | null
-    address: string | null
-    state: string | null
-    phone: string | null
+    name: string | boolean
+    email: string | boolean
+    confirm: string | boolean
+    address: string | boolean
+    state: string | boolean
+    phone: string | boolean
 }
 
 const initialState = {
@@ -89,14 +90,27 @@ const initialState = {
     address: '',
     state: '',
     phone: '',
-    errors: {} as Errors
+    errors: {
+        name: true,
+        email: true,
+        confirm: true,
+        address: true,
+        state: true,
+        phone: true
+    } as Errors
 }
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i) // prettier-ignore
 const validPhoneRegex = RegExp(/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/)
 
-const BuyerDetailsComponent: React.FC = props => {
+const BuyerDetailsComponent: React.FC = () => {
     const [state, setState] = useState(initialState)
+    const { setFormIsValid } = useContext(Context)
+
+    const validateForm = (errors: Errors) => {
+        const isValid = Object.values(errors).every(val => !val)
+        setFormIsValid(isValid)
+    }
 
     const validate = (name: NameType) => () => {
         const { errors } = state
@@ -105,37 +119,38 @@ const BuyerDetailsComponent: React.FC = props => {
         // prettier-ignore
         switch (name) {
             case 'name':
-                errors.name = value.length < 2 ? 'Name too short' : null
+                errors.name = value.length < 2 ? 'Name too short' : false
                 break
             case 'email':
                 errors.email = !validEmailRegex.test(value)
                     ? 'Invalid email'
-                    : null
+                    : false
                 break
             case 'confirm':
                 errors.confirm = state.email !== value
-                        ? 'Email does not match'
-                        : null
+                    ? 'Email does not match'
+                    : false
                 break
             case 'address':
                 errors.address = value.trim().split(' ').length < 3
-                        ? 'Address too short'
-                        : null
+                    ? 'Address too short'
+                    : false
                 break
             case 'state':
                 errors.state = value.length !== 2
-                        ? 'Invalid state' 
-                        : null
+                    ? 'Invalid state' 
+                    : false
                 break
             case 'phone':
                 errors.phone = !validPhoneRegex.test(value)
-                        ? 'Invalid phone'
-                        : null
+                    ? 'Invalid phone'
+                    : false
                 break
                 default:
                 break
         }
 
+        validateForm(errors)
         setState(prev => ({ ...prev, errors }))
     }
 
@@ -158,7 +173,7 @@ const BuyerDetailsComponent: React.FC = props => {
                             {state.errors[f.name]}
                         </span>
                     )}
-                    <label className='flex justify-between'>
+                    <label className='flex justify-between' htmlFor={f.name}>
                         {f.label}
                         <span className='icon-wrap h-6 inline-block w-6'>
                             <Icon

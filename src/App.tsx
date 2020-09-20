@@ -11,12 +11,16 @@ export type Order = {
 
 export interface ContextProps {
     order: Order
+    formIsValid: boolean
     setOrder: (order: any) => void
+    setFormIsValid: (bool: boolean) => void
 }
 
 export const Context = React.createContext<ContextProps>({
     order: { toppings: [], size: '' },
-    setOrder: () => ({ toppings: [], size: '' })
+    formIsValid: false,
+    setOrder: () => {},
+    setFormIsValid: () => {}
 })
 
 const App = () => {
@@ -26,12 +30,15 @@ const App = () => {
         ],
         size: 'medium'
     })
+    const [formIsValid, setFormIsValid] = useState(false)
 
     return (
         <Context.Provider
             value={{
                 order,
-                setOrder
+                formIsValid,
+                setOrder,
+                setFormIsValid
             }}>
             <div className='h-screen w-screen flex flex-row'>
                 <PizzaViewer />

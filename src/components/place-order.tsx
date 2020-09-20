@@ -11,7 +11,7 @@ const calcTotal = (order: Order): number => {
 }
 
 const PlaceOrderComponent: React.FC = () => {
-    const { order } = useContext(Context)
+    const { order, formIsValid } = useContext(Context)
 
     return (
         <div className='order w-full flex-1 py-5 px-10 flex flex-col'>
@@ -35,7 +35,11 @@ const PlaceOrderComponent: React.FC = () => {
             </div>
             <button
                 onClick={() =>
-                    alert('Your order is being processed. Thank you!')
+                    alert(
+                        formIsValid
+                            ? 'Your order is being processed. Thank you!'
+                            : 'Some fields are incomplete.'
+                    )
                 }
                 className={classList({
                     'active:neu-pressed-red': true,
