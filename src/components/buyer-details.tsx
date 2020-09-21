@@ -21,7 +21,7 @@ const fieldClasses = join([
     'w-full'
 ])
 
-const inputClasses = join(['neu-pressed-light', 'p-3', 'rounded-lg', 'w-full'])
+const inputClasses = join(['neu-pressed-light', 'p-3', 'rounded-lg', 'w-full', 'bg-gray-200'])
 
 type NameType = 'name' | 'email' | 'confirm' | 'address' | 'state' | 'phone'
 

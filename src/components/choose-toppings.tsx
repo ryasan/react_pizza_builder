@@ -28,6 +28,8 @@ const ChooseToppingsComponent: React.FC = () => {
                         key={t.name}
                         onClick={toggleSelect(t)}
                         className={classList({
+                            'bg-gray-200': true,
+                            border: true,
                             'cursor-pointer': true,
                             flex: true,
                             'h-10': true,
@@ -44,7 +46,7 @@ const ChooseToppingsComponent: React.FC = () => {
                                 'inline-block': true,
                                 'justify-center': true,
                                 'rounded-l-lg': true,
-                                'w-10 h-10': true
+                                'w-10 h-full': true
                             })}>
                             <img
                                 className='h-6 w-6 m-2'
