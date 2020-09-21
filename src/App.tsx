@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-import PizzaViewer from './components/pizza-viewer'
-import PizzaForm from './components/pizza-form'
+import HomePage from './pages/home'
+import PizzaBuilderPage from './pages/pizza-builder'
 import { Pepperoni, ToppingData, Topping } from './constants'
 
 export type Order = {
@@ -40,10 +41,16 @@ const App = () => {
                 setOrder,
                 setFormIsValid
             }}>
-            <div className='h-screen w-screen flex flex-row'>
-                <PizzaViewer />
-                <PizzaForm />
-            </div>
+            <Router>
+                <Switch>
+                    <Route exact path='/'>
+                        <HomePage />
+                    </Route>
+                    <Route path='/builder'>
+                        <PizzaBuilderPage />
+                    </Route>
+                </Switch>
+            </Router>
         </Context.Provider>
     )
 }

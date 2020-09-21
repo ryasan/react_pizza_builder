@@ -811,7 +811,7 @@ module.exports = {
             const AppLogo = {
                 '.neu-flat-light': {
                     background: '#F7FAFC',
-                    'box-shadow': '5px 5px 10px #d2d5d6, -5px -5px 10px #ffffff'
+                    'box-shadow': '5px 5px 10px #d2d5d6'
                 },
                 '.neu-pressed-light': {
                     background: '#F7FAFC',

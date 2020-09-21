@@ -35,7 +35,7 @@ const ChooseToppingsComponent: React.FC = () => {
                             'neu-flat-light': !find(order.toppings, { name: t.name }), // prettier-ignore
                             'neu-pressed-light': find(order.toppings, { name: t.name }), // prettier-ignore
                             'rounded-lg': true,
-                            'topping-item': true,
+                            'topping-item': true
                         })}>
                         <span
                             className={classList({

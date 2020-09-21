@@ -6,7 +6,7 @@ import Divider from './divider'
 import PlaceOrder from './place-order'
 
 const PizzaFormComponent: React.FC = () => (
-    <div className='form-container w-full flex-1 flex justify-center py-5 overflow-y-scroll bg-gray-100'>
+    <div className='form-container w-full flex-1 flex justify-center py-5 overflow-y-scroll bg-gray-200'>
         <div className='form-inner max-w-screen-xl w-full flex flex-col'>
             <BuyerDetails />
             <Divider text='Choose Pizza' />

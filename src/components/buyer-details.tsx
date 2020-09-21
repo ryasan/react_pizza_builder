@@ -5,7 +5,8 @@ import { join } from '../utils'
 import { Context } from '../app'
 
 const fieldClasses = join([
-    'border-gray-200',
+    'bg-gray-200',
+    'border-gray-300',
     'border',
     'field',
     'flex-col',
@@ -170,7 +171,7 @@ const BuyerDetailsComponent: React.FC = () => {
             {fields.map((f, i) => (
                 <div className={fieldClasses} key={i}>
                     {state.errors[f.name] && (
-                        <span className='text-red-600 absolute top-0 left-0 ml-5 mt-1'>
+                        <span className='text-red-500 absolute top-0 left-0 ml-5 mt-1'>
                             {state.errors[f.name]}
                         </span>
                     )}

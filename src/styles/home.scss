@@ -1,0 +1,87 @@
+.home-page {
+    --stripe: #f56565;
+    --bg: #f57777;
+
+    background:
+        linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+        linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+        linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-color: var(--stripe);
+    background-size: 100px 100px;
+    color: white;
+    font-family: 'Vast Shadow', cursive;
+    width: 38rem;
+}
+
+.slice {
+    background: url('../assets/pizza.svg') center center/cover no-repeat;
+    height: 10rem;
+    width: 10rem;
+}
+
+.mr-pizza-title > path {
+    &:nth-child(2) {
+        animation: draw-text 2s ease forwards;
+        stroke-dasharray: 1536;
+        stroke-dashoffset: 1536;
+    }
+
+    &:nth-child(3) {
+        animation: draw-text 2s ease 0.3s forwards;
+        stroke-dasharray: 611;
+        stroke-dashoffset: 611;
+    }
+
+    &:nth-child(4) {
+        animation: draw-text 2s ease 0.6s forwards;
+        stroke-dasharray: 155;
+        stroke-dashoffset: 155;
+    }
+
+    &:nth-child(5) {
+        animation: draw-text 2s ease 0.9s forwards;
+        stroke-dasharray: 1011;
+        stroke-dashoffset: 1011;
+    }
+
+    &:nth-child(6) {
+        animation: draw-text 2s ease 1.2s forwards;
+        stroke-dasharray: 580;
+        stroke-dashoffset: 580;
+    }
+
+    &:nth-child(7) {
+        animation: draw-text 2s ease 1.5s forwards;
+        stroke-dasharray: 870;
+        stroke-dashoffset: 870;
+    }
+
+    &:nth-child(8) {
+        animation: draw-text 2s ease 1.8s forwards;
+        stroke-dasharray: 870;
+        stroke-dashoffset: 870;
+    }
+
+    &:nth-child(9) {
+        animation: draw-text 2s ease 2.1s forwards;
+        stroke-dasharray: 906;
+        stroke-dashoffset: 906;
+    }
+}
+
+@keyframes draw-text {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: white;
+    }
+}
