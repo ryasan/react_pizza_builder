@@ -1,3 +1,5 @@
+@import './globals';
+
 .home-page {
     --stripe: #f56565;
     --bg: #f57777;
@@ -11,20 +13,16 @@
     background-size: 100px 100px;
     color: white;
     font-family: 'Vast Shadow', cursive;
-    width: 38rem;
-}
-
-.slice {
-    animation: spin-fade 2s ease 0.5s forwards;
-    background: url('../assets/pizza.svg') center center/cover no-repeat;
-    height: 10rem;
-    opacity: 0;
-    width: 10rem;
 }
 
 .home-btn {
     animation: fade 1.5s ease 1s forwards;
     opacity: 0;
+    transform: translateY(-12rem);
+}
+
+.mr-pizza-title {
+    margin-top: 5rem;
 }
 
 .mr-pizza-title > path {
@@ -83,6 +81,18 @@
     }
 }
 
+@keyframes fadeSpin {
+    from {
+        opacity: 0;
+        transform: rotate(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(360deg) scale(0.5);
+    }
+}
+
 @keyframes fill {
     from {
         fill: transparent;
@@ -93,18 +103,6 @@
     }
 }
 
-@keyframes spin-fade {
-    from {
-        opacity: 0;
-        transform: rotate(0);
-    }
-
-    to {
-        opacity: 1;
-        transform: rotate(360deg);
-    }
-}
-
 @keyframes fade {
     from {
         opacity: 0;
@@ -112,5 +110,352 @@
 
     to {
         opacity: 1;
+    }
+}
+
+$width: 500px;
+
+.container {
+    align-items: center;
+    animation: fadeSpin 1s forwards;
+    display: flex;
+    height: $width;
+    justify-content: center;
+    opacity: 0;
+    position: relative;
+    transform: scale(0.5);
+    width: $width !important;
+}
+
+.box-container {
+    left: 0;
+    perspective: 1500px;
+    position: absolute;
+    top: 0;
+}
+
+.box {
+    background: $black-red;
+    height: $width;
+    perspective: 150px;
+    position: relative;
+    transform: rotateX(45deg);
+    width: $width;
+}
+
+.box__side {
+    background: $black-red;
+    border: 10px solid $black;
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    width: 30px;
+
+    &:nth-child(1) {
+        border-top: 0;
+        left: -33px;
+        transform: skewY(60deg);
+        transform-origin: top right;
+        width: 35px;
+    }
+
+    &:nth-child(2) {
+        height: $width;
+        top: 0;
+        transform: rotate(-90deg) rotateY(-36deg);
+        transform-origin: top left;
+        z-index: 1;
+    }
+
+    &:nth-child(3) {
+        border-top: 0;
+        right: -33px;
+        transform: skewY(-60deg);
+        transform-origin: top left;
+        width: 35px;
+    }
+}
+
+.box-front-container {
+    perspective: 1300px;
+}
+
+.box-front {
+    background: $red;
+    border: 10px solid $black;
+    bottom: 46px;
+    height: 57px;
+    left: -60px;
+    position: absolute;
+    transform: rotateX(-5deg);
+    width: 620px;
+    z-index: 10;
+}
+
+.home-pizza {
+    align-items: center;
+    background: #ffc87a;
+    border: 26px solid #8d6e63;
+    border-radius: 50%;
+    display: grid;
+    grid-template-areas:
+        '. . p1 . .'
+        '. p2 . p3 .'
+        'p4 . p5 . p6'
+        '. p7 . p8 .'
+        '. . p9 . .';
+    height: 95%;
+    justify-items: center;
+    margin: auto;
+    padding: 5px;
+    position: relative;
+    width: 95%;
+
+    &::before {
+        border: 10px solid $black;
+        border-radius: 50%;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &::after {
+        border: 10px solid $black;
+        border-radius: 50%;
+        content: '';
+        height: calc(100% + 52px);
+        left: -26px;
+        position: absolute;
+        top: -26px;
+        width: calc(100% + 52px);
+    }
+}
+
+@for $i from 1 through 9 {
+    .pepperoni--#{$i} {
+        grid-area: p#{$i};
+    }
+}
+
+.pepperoni {
+    background: $red;
+    border: 10px solid $black;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+}
+
+.steam-outer {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &.open {
+        z-index: 10;
+
+        .steam:first-child {
+            animation-name: steamA;
+        }
+
+        .steam:nth-child(2) {
+            animation-name: steamB;
+        }
+
+        .steam:last-child {
+            animation-name: steamB;
+        }
+    }
+}
+
+.steam-container {
+    height: 225px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: 75px;
+
+    .steam {
+        animation: 4s linear infinite 0.5s;
+        border: 0;
+        border-radius: 50%;
+        bottom: 0;
+        height: 0;
+        position: absolute;
+        transform: translateX(10px);
+        width: 75px;
+
+        &:first-child {
+            border-left: 20px solid white;
+        }
+
+        &:nth-child(2) {
+            border-right: 20px solid white;
+            transform: translateY(-73px);
+        }
+
+        &:last-child {
+            border-left: 20px solid white;
+            transform: translate(7px, -140px);
+        }
+    }
+
+    &:nth-child(2) {
+        transform: translate(-150px, 50px) scale(0.5);
+    }
+
+    &:nth-child(3) {
+        transform: translate(75px, 50px) scale(0.5);
+    }
+}
+
+.lid-container {
+    left: 0;
+    perspective: 1500px;
+    position: absolute;
+    top: 59px;
+    z-index: 1;
+}
+
+.lid-inner {
+    border: 10px solid $black;
+    border-bottom: 0;
+    height: 430px;
+    top: 0;
+    transform: rotateX(43deg);
+    transform-origin: top;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    width: $width;
+
+    &.open {
+        transform: rotateX(110deg);
+
+        .lid__front {
+            transform: rotateX(-110deg);
+        }
+    }
+}
+
+.lid {
+    align-items: center;
+    backface-visibility: hidden;
+    background: $red;
+    color: $black;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &--bottom {
+        background: $black-red;
+        transform: rotateY(180deg);
+    }
+
+    &__front {
+        background: $red;
+        border: 10px solid $black;
+        bottom: -50px;
+        cursor: pointer;
+        height: 50px;
+        left: -10px;
+        position: absolute;
+        transform: rotateX(-45deg);
+        transform-origin: top;
+        transition: all 0.5s;
+        width: $width;
+
+        &::before {
+            background: $red;
+            border: 10px solid $black;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            bottom: -30px;
+            content: '';
+            height: 60px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%) rotate(-45deg);
+            transition: all0.5s;
+            width: 60px;
+        }
+    }
+}
+
+@keyframes steamA {
+    0% {
+        height: 0;
+    }
+
+    10% {
+        height: 75px;
+    }
+
+    80% {
+        height: 75px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 75px;
+        opacity: 0;
+    }
+}
+
+@keyframes steamB {
+    0% {
+        height: 0;
+    }
+
+    10% {
+        height: 0;
+    }
+
+    20% {
+        height: 75px;
+    }
+
+    80% {
+        height: 75px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 75px;
+        opacity: 0;
+    }
+}
+
+@keyframes steamC {
+    0% {
+        height: 0;
+    }
+
+    20% {
+        height: 0;
+    }
+
+    30% {
+        height: 75px;
+    }
+
+    80% {
+        height: 75px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 75px;
+        opacity: 0;
     }
 }

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useContext, useState, useEffect } from 'react'
+import React, { ChangeEvent, useContext, useState } from 'react'
 
 import Icon from './icons'
 import { join } from '../utils'

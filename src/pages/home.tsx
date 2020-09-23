@@ -1,8 +1,9 @@
 import React from 'react'
 
 import '../styles/home.scss'
-import { Link } from 'react-router-dom'
+import AnimatedPizza from '../components/animated-pizza'
 import AnimatedTitle from '../components/animated-title'
+import { Link } from 'react-router-dom'
 import { join } from '../utils'
 
 const btnClasses = join([
@@ -23,9 +24,9 @@ const btnClasses = join([
 ])
 
 const HomePage: React.FC = props => (
-    <div className='home-page w-screen h-screen flex flex-col justify-center items-center'>
+    <div className='home-page w-screen h-screen flex flex-col justify-evenly items-center'>
         <AnimatedTitle />
-        <div className='slice mt-20' />
+        <AnimatedPizza />
         <Link to='builder' className={btnClasses}>
             Build Pizza
         </Link>
