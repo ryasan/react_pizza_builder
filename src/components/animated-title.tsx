@@ -3,7 +3,7 @@ import React from 'react'
 const AnimatedTitleComponent: React.FC = props => (
     <svg
         {...props}
-        className='mr-pizza-title'
+        className='home-title'
         width='777'
         height='106'
         viewBox='0 0 777 106'

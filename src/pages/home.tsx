@@ -20,6 +20,7 @@ const btnClasses = join([
     'py-2 ',
     'rounded-lg ',
     'text-2xl ',
+    'text-white',
     'transition'
 ])
 
