@@ -15,7 +15,7 @@ const btnClasses = join([
     'home-btn',
     'hover:bg-white ',
     'hover:text-red-500',
-    'mt-20 ',
+    'opacity-0',
     'px-4 ',
     'py-2 ',
     'rounded-lg ',

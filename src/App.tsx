@@ -24,6 +24,8 @@ export const Context = React.createContext<ContextProps>({
     setFormIsValid: () => {}
 })
 
+const basePath = process.env.NODE_ENV === 'development' ? '/' : '/react_pizza_builder/'
+
 const App = () => {
     const [order, setOrder] = useState({
         toppings: [
@@ -43,10 +45,10 @@ const App = () => {
             }}>
             <Router>
                 <Switch>
-                    <Route exact path='/'>
+                    <Route exact path={`${basePath}`}>
                         <HomePage />
                     </Route>
-                    <Route path='/builder'>
+                    <Route path={`${basePath}builder`}>
                         <PizzaBuilderPage />
                     </Route>
                 </Switch>

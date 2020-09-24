@@ -399,6 +399,10 @@ $width: 250px;
     }
 }
 
+.home-btn {
+    animation: fade 1.5s ease 1.5s forwards;
+}
+
 @keyframes steamC {
     0% {
         height: 0;
