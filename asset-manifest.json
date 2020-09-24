@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react_pizza_builder/static/css/main.d2de62b2.chunk.css",
-    "main.js": "/react_pizza_builder/static/js/main.8ed97aba.chunk.js",
-    "main.js.map": "/react_pizza_builder/static/js/main.8ed97aba.chunk.js.map",
+    "main.css": "/react_pizza_builder/static/css/main.75d994e1.chunk.css",
+    "main.js": "/react_pizza_builder/static/js/main.8f04856a.chunk.js",
+    "main.js.map": "/react_pizza_builder/static/js/main.8f04856a.chunk.js.map",
     "runtime-main.js": "/react_pizza_builder/static/js/runtime-main.f2f93c16.js",
     "runtime-main.js.map": "/react_pizza_builder/static/js/runtime-main.f2f93c16.js.map",
     "static/js/2.52ccf853.chunk.js": "/react_pizza_builder/static/js/2.52ccf853.chunk.js",
     "static/js/2.52ccf853.chunk.js.map": "/react_pizza_builder/static/js/2.52ccf853.chunk.js.map",
     "index.html": "/react_pizza_builder/index.html",
-    "precache-manifest.e1bc49116721ba6798a996db6c346f91.js": "/react_pizza_builder/precache-manifest.e1bc49116721ba6798a996db6c346f91.js",
+    "precache-manifest.fa5600a0eb5e6fce594e180188137db4.js": "/react_pizza_builder/precache-manifest.fa5600a0eb5e6fce594e180188137db4.js",
     "service-worker.js": "/react_pizza_builder/service-worker.js",
-    "static/css/main.d2de62b2.chunk.css.map": "/react_pizza_builder/static/css/main.d2de62b2.chunk.css.map",
+    "static/css/main.75d994e1.chunk.css.map": "/react_pizza_builder/static/css/main.75d994e1.chunk.css.map",
     "static/js/2.52ccf853.chunk.js.LICENSE.txt": "/react_pizza_builder/static/js/2.52ccf853.chunk.js.LICENSE.txt",
     "static/media/pizza-viewer.scss": "/react_pizza_builder/static/media/tomato.93558262.svg",
     "static/media/base.svg": "/react_pizza_builder/static/media/base.546b631b.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.f2f93c16.js",
     "static/js/2.52ccf853.chunk.js",
-    "static/css/main.d2de62b2.chunk.css",
-    "static/js/main.8ed97aba.chunk.js"
+    "static/css/main.75d994e1.chunk.css",
+    "static/js/main.8f04856a.chunk.js"
   ]
 }
