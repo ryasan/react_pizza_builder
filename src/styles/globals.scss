@@ -8,77 +8,77 @@ $red: #f56565;
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    // outline: 1px solid red !important;
-    padding: 0;
-    text-overflow: ellipsis;
+  box-sizing: border-box;
+  margin: 0;
+  // outline: 1px solid red !important;
+  padding: 0;
+  text-overflow: ellipsis;
 }
 
 input:focus {
-    box-shadow:
-        0 0 0 2pt $red,
-        inset 5px 5px 3px #d2d5d6,
-        inset -5px -5px 3px white !important;
-    outline: 0;
+  box-shadow:
+    0 0 0 2pt $red,
+    inset 5px 5px 3px #d2d5d6,
+    inset -5px -5px 3px white !important;
+  outline: 0;
 }
 
 html,
 body {
-    box-sizing: border-box;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
 body {
-    color: $dark-gray;
+  color: $dark-gray;
 }
 
 ::-webkit-scrollbar {
-    width: 0.3rem;
+  width: 0.3rem;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f7fafc;
+  background: #f7fafc;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $red;
+  background: $red;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: white;
+  background: white;
 }
 
 .divider {
-    &::before {
-        background: $red;
-        content: '';
-        flex: 1;
-        height: 0.1rem;
-        margin: 0 2rem;
-        width: 100%;
-    }
+  &::before {
+    background: $red;
+    content: '';
+    flex: 1;
+    height: 0.1rem;
+    margin: 0 2rem;
+    width: 100%;
+  }
 
-    &::after {
-        background: $red;
-        content: '';
-        flex: 1;
-        height: 0.1rem;
-        margin: 0 2rem;
-        width: 100%;
-    }
+  &::after {
+    background: $red;
+    content: '';
+    flex: 1;
+    height: 0.1rem;
+    margin: 0 2rem;
+    width: 100%;
+  }
 }
 
 .order__btn {
-    font-family: 'Vast Shadow', cursive;
+  font-family: 'Vast Shadow', cursive;
+  outline-color: $red;
+
+  &:active {
+    box-shadow: inset 5px 5px 10px #d05656, inset -5px -5px 10px #ff7474;
+  }
+
+  &:focus {
     outline-color: $red;
-
-    &:active {
-        box-shadow: inset 5px 5px 10px #d05656, inset -5px -5px 10px #ff7474;
-    }
-
-    &:focus {
-        outline-color: $red;
-    }
+  }
 }

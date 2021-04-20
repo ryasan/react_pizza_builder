@@ -37,92 +37,92 @@ import MapIcon from './map'
 import PhoneIcon from './phone'
 
 export type IconInterface = {
-    name: string
-    className?: string
-    onClick?: (...args: any[]) => void
+	name: string
+	className?: string
+	onClick?: (...args: any[]) => void
 }
 
-const IconComponent: React.FC<IconInterface> = props => {
-    switch (props.name) {
-        case 'account-circle':
-        case 'account-box':
-            return <AccountIcon {...props} />
-        case 'briefcase':
-            return <BriefcaseIcon {...props} />
-        case 'cart':
-            return <CartIcon {...props} />
-        case 'dollar':
-            return <DollarIcon {...props} />
-        case 'down-arrow':
-            return <DownArrowIcon {...props} />
-        case 'envelope':
-            return <EnvelopeIcon {...props} />
-        case 'exit':
-            return <ExitIcon {...props} />
-        case 'close':
-            return <CloseIcon {...props} />
-        case 'codepen':
-            return <CodepenIcon {...props} />
-        case 'facebook-filled':
-        case 'facebook-outlined':
-            return <FacebookIcon {...props} />
-        case 'filter':
-            return <FilterIcon {...props} />
-        case 'fingerprint':
-            return <FingerprintIcon {...props} />
-        case 'github':
-            return <GithubIcon {...props} />
-        case 'home':
-            return <HomeIcon {...props} />
-        case 'instagram-filled':
-        case 'instagram-outlined':
-            return <InstagramIcon {...props} />
-        case 'key-filled':
-        case 'key-outlined':
-            return <KeyIcon {...props} />
-        case 'left-arrow':
-            return <LeftArrowIcon {...props} />
-        case 'light-bulb':
-            return <LightBulbIcon {...props} />
-        case 'linkedin':
-            return <LinkedInIcon {...props} />
-        case 'magnifier':
-        case 'magnifier-texture':
-            return <MagnifierIcon {...props} />
-        case 'map':
-            return <MapIcon {...props} />
-        case 'marker':
-            return <MarkerIcon {...props} />
-        case 'money':
-            return <MoneyIcon {...props} />
-        case 'person':
-            return <PersonIcon {...props} />
-        case 'person-add':
-            return <PersonAddIcon {...props} />
-        case 'phone':
-            return <PhoneIcon {...props} />
-        case 'right-arrow':
-            return <RightArrowIcon {...props} />
-        case 'settings':
-            return <SettingsIcon {...props} />
-        case 'shopping-bag':
-            return <ShoppingBagIcon {...props} />
-        case 'smiley-face':
-            return <SmileyFaceIcon {...props} />
-        case 'store':
-            return <StoreIcon {...props} />
-        case 'title':
-            return <TitleIcon {...props} />
-        case 'twitter-filled':
-        case 'twitter-outlined':
-            return <TwitterIcon {...props} />
-        case 'upload-filled':
-        case 'upload-outlined':
-            return <UploadIcon {...props} />
-        case 'document':
-        default:
-            return <DocumentIcon {...props} />
-    }
+const IconComponent: React.FC<IconInterface> = (props) => {
+	switch (props.name) {
+		case 'account-circle':
+		case 'account-box':
+			return <AccountIcon {...props} />
+		case 'briefcase':
+			return <BriefcaseIcon {...props} />
+		case 'cart':
+			return <CartIcon {...props} />
+		case 'dollar':
+			return <DollarIcon {...props} />
+		case 'down-arrow':
+			return <DownArrowIcon {...props} />
+		case 'envelope':
+			return <EnvelopeIcon {...props} />
+		case 'exit':
+			return <ExitIcon {...props} />
+		case 'close':
+			return <CloseIcon {...props} />
+		case 'codepen':
+			return <CodepenIcon {...props} />
+		case 'facebook-filled':
+		case 'facebook-outlined':
+			return <FacebookIcon {...props} />
+		case 'filter':
+			return <FilterIcon {...props} />
+		case 'fingerprint':
+			return <FingerprintIcon {...props} />
+		case 'github':
+			return <GithubIcon {...props} />
+		case 'home':
+			return <HomeIcon {...props} />
+		case 'instagram-filled':
+		case 'instagram-outlined':
+			return <InstagramIcon {...props} />
+		case 'key-filled':
+		case 'key-outlined':
+			return <KeyIcon {...props} />
+		case 'left-arrow':
+			return <LeftArrowIcon {...props} />
+		case 'light-bulb':
+			return <LightBulbIcon {...props} />
+		case 'linkedin':
+			return <LinkedInIcon {...props} />
+		case 'magnifier':
+		case 'magnifier-texture':
+			return <MagnifierIcon {...props} />
+		case 'map':
+			return <MapIcon {...props} />
+		case 'marker':
+			return <MarkerIcon {...props} />
+		case 'money':
+			return <MoneyIcon {...props} />
+		case 'person':
+			return <PersonIcon {...props} />
+		case 'person-add':
+			return <PersonAddIcon {...props} />
+		case 'phone':
+			return <PhoneIcon {...props} />
+		case 'right-arrow':
+			return <RightArrowIcon {...props} />
+		case 'settings':
+			return <SettingsIcon {...props} />
+		case 'shopping-bag':
+			return <ShoppingBagIcon {...props} />
+		case 'smiley-face':
+			return <SmileyFaceIcon {...props} />
+		case 'store':
+			return <StoreIcon {...props} />
+		case 'title':
+			return <TitleIcon {...props} />
+		case 'twitter-filled':
+		case 'twitter-outlined':
+			return <TwitterIcon {...props} />
+		case 'upload-filled':
+		case 'upload-outlined':
+			return <UploadIcon {...props} />
+		case 'document':
+		default:
+			return <DocumentIcon {...props} />
+	}
 }
 
 export default IconComponent

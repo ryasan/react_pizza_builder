@@ -1,26 +1,26 @@
 @import './globals';
 
 .size__dish {
-    align-items: center;
-    border: 0.2rem solid $dark-gray;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    transition: all 0.2s;
+  align-items: center;
+  border: 0.2rem solid $dark-gray;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s;
 
-    &--small {
-        min-height: 3rem;
-        min-width: 3rem;
-    }
+  &--small {
+    min-height: 3rem;
+    min-width: 3rem;
+  }
 
-    &--medium {
-        min-height: 4rem;
-        min-width: 4em;
-    }
+  &--medium {
+    min-height: 4rem;
+    min-width: 4em;
+  }
 
-    &--large {
-        min-height: 5rem;
-        min-width: 5rem;
-    }
+  &--large {
+    min-height: 5rem;
+    min-width: 5rem;
+  }
 }

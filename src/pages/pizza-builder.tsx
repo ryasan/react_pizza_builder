@@ -3,11 +3,11 @@ import React from 'react'
 import PizzaForm from '../components/pizza-form'
 import PizzaViewer from '../components/pizza-viewer'
 
-const PizzaBuilderPage: React.FC = props => (
-    <div className='h-screen w-screen flex flex-row'>
-        <PizzaViewer />
-        <PizzaForm />
-    </div>
+const PizzaBuilderPage: React.FC = () => (
+	<div className='flex flex-row w-screen h-screen'>
+		<PizzaViewer />
+		<PizzaForm />
+	</div>
 )
 
 export default PizzaBuilderPage
