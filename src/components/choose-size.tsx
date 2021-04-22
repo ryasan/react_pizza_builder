@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 
-import {sizePrices} from '../constants'
 import '../styles/choose-size.scss'
+import {sizePrices} from '../constants'
 import {Context, Order} from '../app'
 import {classList} from '../utils'
 
@@ -15,7 +15,7 @@ const ChooseSizeComponent: React.FC = () => {
 	return (
 		<div className='w-full px-10'>
 			<p>Size</p>
-			<div className='size w-full max-w-3xl m-auto flex justify-evenly items-center px-10 overflow-hidden'>
+			<div className='size justify-evenly flex items-center w-full max-w-3xl px-10 m-auto overflow-hidden'>
 				{Object.entries(sizePrices).map(([size, details], i) => (
 					<div
 						key={i}

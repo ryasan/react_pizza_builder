@@ -2,7 +2,6 @@ import React, {useContext} from 'react'
 import {sumBy} from 'lodash'
 
 import {Context, Order} from '../app'
-
 import {classList, formatPrice, capitalize} from '../utils'
 import {sizePrices} from '../constants'
 
@@ -14,7 +13,7 @@ const PlaceOrderComponent: React.FC = () => {
 	const {order, formIsValid} = useContext(Context)
 
 	return (
-		<div className='order w-full flex-1 py-5 px-10 flex flex-col'>
+		<div className='order flex flex-col flex-1 w-full px-10 py-5'>
 			<div className='order__summary h-full'>
 				<ul className='item-list'>
 					<li className='flex justify-between'>

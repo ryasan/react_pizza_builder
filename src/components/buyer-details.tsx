@@ -142,10 +142,7 @@ const BuyerDetailsComponent: React.FC = () => {
 		e.preventDefault()
 		const {name, value} = e.target as HTMLInputElement
 
-		setState((prev) => ({
-			...prev,
-			[name]: modifier ? modifier(value) : value,
-		}))
+		setState((prev) => ({...prev, [name]: modifier ? modifier(value) : value}))
 	}
 
 	return (
